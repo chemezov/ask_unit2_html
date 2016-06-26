@@ -1,0 +1,38 @@
+@import "variables.less";
+@import "mixins";
+
+.b-map {
+	position: relative;
+	height: 430px;
+}
+
+.b-map__container {
+	position: relative;
+	z-index: 100;
+}
+
+.b-map__content {
+	position: absolute;
+	top: 88px;
+	left: 0;
+
+	background: rgba(0, 0, 0, .8);
+	border-radius: 5px;
+
+	font-family: @font-family-secondary;
+	font-size: 14px;
+	line-height: 18px;
+	color: #fff;
+
+	padding: 45px 110px 43px 52px;
+
+	a {
+		color: #fff;
+	}
+}
+
+.b-map__phone {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 1.2;
+}

@@ -1,0 +1,64 @@
+@import "variables.less";
+@import "mixins";
+
+.b-splash-block-1 {
+	height: 590px;
+	background: #e3f1fe right -40px top no-repeat url("../../assets/img/splash-block-1-bg.jpg");
+}
+
+.b-splash-block-1__title {
+	font-family: @font-family-primary;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 55px;
+	color: #000;
+	text-transform: uppercase;
+	margin-top: 110px;
+	margin-bottom: 25px;
+}
+
+.b-splash-block-1__title_color_red {
+	color: #f32400;
+}
+
+.b-splash-block-1__text {
+	font-family: @font-family-secondary;
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
+
+.b-splash-block-1__price {
+	display: inline-block;
+	height: 61px;
+	line-height: 53px;
+	font-size: 20px;
+	background: #ffcc00;
+	padding: 6px 18px 2px;
+
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: -29px;
+		width: 29px;
+		height: 61px;
+		background: left top no-repeat url("../../assets/img/splash-block-1-button-left.png");
+		content: '';
+	}
+	&:after {
+		position: absolute;
+		top: 0;
+		right: -29px;
+		width: 29px;
+		height: 61px;
+		background: left top no-repeat url("../../assets/img/splash-block-1-button-right.png");
+		content: '';
+	}
+}
+
+.b-splash-block-1__price-value {
+	font-weight: 500;
+	font-size: 40px;
+}

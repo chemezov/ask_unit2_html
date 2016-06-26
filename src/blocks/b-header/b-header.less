@@ -1,0 +1,59 @@
+@import "variables.less";
+@import "mixins";
+
+.b-header {
+	padding: 16px 0;
+	background-color: #ffffff;
+}
+
+.b-header__container {
+	.clearfix();
+}
+
+.b-header__logo {
+	float: left;
+}
+
+.b-header__lead {
+	border-left: 1px solid #f32400;
+	padding: 23px 0 23px 25px;
+	margin-left: 27px;
+	float: left;
+}
+
+.b-header__lead-text {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #000000;
+	text-transform: uppercase;
+	font-family: 'Fira Sans', sans-serif;
+	margin: 0;
+}
+
+.b-header__info {
+	float: right;
+}
+
+.b-header__info-text {
+	font-family: @font-family-secondary;
+	font-size: 14px;
+	line-height: 18px;
+	color: #33383c;
+	margin: 0;
+}
+
+.b-header__phone {
+	font-family: @font-family-secondary;
+	font-size: 24px;
+	color: #33383c;
+	margin: 0;
+}
+
+.b-header__link {
+	color: #33383c;
+
+	&:hover, &:active, &:focus {
+		color: #33383c;
+	}
+}

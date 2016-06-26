@@ -1,0 +1,236 @@
+doctype html
+html
+    include ./includes/head.jade
+    body
+        include ./includes/header.jade
+
+        .b-splash-block-1
+            .container
+                h1.b-splash-block-1__title Строить с нами #[span.b-splash-block-1__title_color_red выгодней#[br] и безопасней], чем с прорабом#[br]или частной бригадой
+
+                p.b-splash-block-1__text Фундамент буронабивные сваи с ростверком,#[br]несущие стены из газобетонных блоков #[b D 500], кровля#[br]металлочерепица окна двери.
+
+                span.b-splash-block-1__price #[span.b-splash-block-1__price-value 16 000] руб/м2
+        .b-feedback-mini
+            h2.b-feedback-mini__title Записаться на просмотр строящегося дома
+
+            form.form-inline.b-feedback-mini__form
+                .form-group
+                    label.sr-only Представьтесь:
+                    input.form-control(type="text", placeholder="Представьтесь:")
+                .form-group
+                    label.sr-only Телефон:
+                    input.form-control(type="text", placeholder="Телефон:")
+                button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
+
+        .b-advantages
+            .container
+                h2.b-advantages__title ваши выгоды
+
+                .clearfix
+                    .row
+                        .col-xs-4
+                            .b-advantages__item
+                                img.b-advantages__image(src='assets/img/advantages/1.png')
+
+                                p.b-advantages__text У нас оптовые цены#[br]на материалы без наценки.
+                        .col-xs-4
+                            .b-advantages__item
+                                img.b-advantages__image(src='assets/img/advantages/2.png')
+
+                                p.b-advantages__text Гарантия на строительные#[br]работы 7 лет.
+                        .col-xs-4
+                            .b-advantages__item
+                                img.b-advantages__image(src='assets/img/advantages/3.png')
+
+                                p.b-advantages__text Не каких дополнительных платежей. Сметная стоимость закрепляется в&nbsp;договоре и не меняется.
+                .clearfix
+                    .row
+                        .col-xs-4
+                            .b-advantages__item
+                                img.b-advantages__image(src='assets/img/advantages/4.png')
+
+                                p.b-advantages__text Строительство дома согласно проекту, что исключает возможность серьезных ошибок.
+                        .col-xs-4
+                            .b-advantages__item
+                                img.b-advantages__image(src='assets/img/advantages/5.png')
+
+                                p.b-advantages__text Удобная система оплаты по этапам строительства, мы не просим всю сумму сразу.
+                        .col-xs-4
+                            .b-advantages__item
+                                img.b-advantages__image(src='assets/img/advantages/6.png')
+
+                                p.b-advantages__text Подробная и прозрачная смета, в&nbsp;которой расписаны все материалы и работы.
+        .b-catalog
+            .container
+                h2.b-catalog__header посмотрите самые популярные#[br]проекты домов
+
+                // Nav tabs
+                ul.nav.nav-pills.b-catalog__tabs(role='tablist')
+                    li.active(role='presentation'): a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') от 70-100 м2
+                    li(role='presentation'): a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') от 100-150 м2
+                    li(role='presentation'): a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') от 150-200 м2
+                    li(role='presentation'): a(href='#tab4', aria-controls='tab4', role='tab', data-toggle='tab') свыше 200 м2
+                // Tab panes
+                .tab-content
+                    #tab1.tab-pane.active(role='tabpanel')
+                        .row
+                            .col-xs-4
+                                .b-catalog__item
+                                    img.b-catalog__image(src='http://placehold.it/297x197')
+
+                                    p.b-catalog__title «Березка»
+
+                                    ul.b-catalog-attributes
+                                        li.b-catalog-attributes__item
+                                            span.b-catalog-attributes__title Общая площадь:
+                                            span.b-catalog-attributes__value 114 м#[sup 2]
+                                        li.b-catalog-attributes__item
+                                            span.b-catalog-attributes__title Срок строительства:
+                                            span.b-catalog-attributes__value за 40-120 дней
+
+                                    p.b-catalog__price цена #[span.b-catalog__price-value 1 045 000] руб.
+
+                                    a.btn.btn-success.b-catalog__button(href='#') Получить планировку и&nbsp;рассчет
+                            .col-xs-4
+                                .b-catalog__item
+                                    img.b-catalog__image(src='http://placehold.it/297x197')
+
+                                    p.b-catalog__title «Березка»
+
+                                    ul.b-catalog-attributes
+                                        li.b-catalog-attributes__item
+                                            span.b-catalog-attributes__title Общая площадь:
+                                            span.b-catalog-attributes__value 114 м#[sup 2]
+                                        li.b-catalog-attributes__item
+                                            span.b-catalog-attributes__title Срок строительства:
+                                            span.b-catalog-attributes__value за 40-120 дней
+
+                                    p.b-catalog__price цена #[span.b-catalog__price-value 1 045 000] руб.
+
+                                    a.btn.btn-success.b-catalog__button(href='#') Получить планировку и&nbsp;рассчет
+                            .col-xs-4
+                                .b-catalog__item
+                                    img.b-catalog__image(src='http://placehold.it/297x197')
+
+                                    p.b-catalog__title «Березка»
+
+                                    ul.b-catalog-attributes
+                                        li.b-catalog-attributes__item
+                                            span.b-catalog-attributes__title Общая площадь:
+                                            span.b-catalog-attributes__value 114 м#[sup 2]
+                                        li.b-catalog-attributes__item
+                                            span.b-catalog-attributes__title Срок строительства:
+                                            span.b-catalog-attributes__value за 40-120 дней
+
+                                    p.b-catalog__price цена #[span.b-catalog__price-value 1 045 000] руб.
+
+                                    a.btn.btn-success.b-catalog__button(href='#') Получить планировку и&nbsp;рассчет
+                    #tab2.tab-pane(role='tabpanel') ...
+                    #tab3.tab-pane(role='tabpanel') ...
+                    #tab4.tab-pane(role='tabpanel') ...
+        .b-feedback-medium
+            .container
+                .b-feedback-medium__background-container
+                    .b-feedback-medium__background
+                .row
+                    .col-xs-5
+                        h2.b-feedback-medium__title Разработка индивидуального проекта #[span.b-feedback-medium__title_underlined БЕСПЛАТНО]
+
+                        p.b-feedback-medium__text Оставьте заявку на бесплатное проектирования вашего дома.
+                    .col-xs-7
+                        form.b-feedback-medium__form
+                            .row
+                                .col-xs-6
+                                    .form-group
+                                        label.sr-only Представьтесь:
+                                        input.form-control(type="text", placeholder="Представьтесь:")
+                                .col-xs-6
+                                    .form-group
+                                        label.sr-only Телефон:
+                                        input.form-control(type="text", placeholder="Телефон:")
+                            .form-group
+                                label.sr-only Комментарии:
+                                textarea.form-control(rows='6', placeholder='Комментарии:')
+
+                            button.btn.btn-success.btn-lg.btn-block.b-feedback-medium__button(type="submit") Отправить заявку на #[span.b-feedback-medium__button_red бесплатный] проект
+
+        .b-gallery
+            h2.b-gallery__title фото со стройплощадки
+
+            .b-gallery__list
+                .b-gallery__item
+                    img.b-gallery__image(src='http://placehold.it/675x479')
+                .b-gallery__item
+                    img.b-gallery__image(src='http://placehold.it/675x479')
+                .b-gallery__item
+                    img.b-gallery__image(src='http://placehold.it/675x479')
+                .b-gallery__item
+                    img.b-gallery__image(src='http://placehold.it/675x479')
+                .b-gallery__item
+                    img.b-gallery__image(src='http://placehold.it/675x479')
+                .b-gallery__item
+                    img.b-gallery__image(src='http://placehold.it/675x479')
+
+        .b-feedback-mini
+            h2.b-feedback-mini__title Записаться на просмотр строящегося дома
+            form.form-inline.b-feedback-mini__form
+                .form-group
+                    label.sr-only Представьтесь:
+                    input.form-control(type="text", placeholder="Представьтесь:")
+                .form-group
+                    label.sr-only Телефон:
+                    input.form-control(type="text", placeholder="Телефон:")
+                button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
+
+        .b-reviews
+            h2.b-reviews__title отзывы клиентов
+
+            .b-reviews__list
+                .b-reviews__item
+                    iframe(width="641",height="360",src="https://www.youtube.com/embed/snHUrs9hGYM",frameborder="0",allowfullscreen)
+                .b-reviews__item
+                    iframe(width="641",height="360",src="https://www.youtube.com/embed/LJfWzTxpDmY",frameborder="0",allowfullscreen)
+        .b-feedback-large
+            .container
+                .b-feedback-large__background-container
+                    .b-feedback-large__background
+                    .b-feedback-large__image
+                .row
+                    .col-xs-8
+                        h2.b-feedback-large__title выполним расчет вашего дома!
+
+                        p.b-feedback-large__text По проектам, эскизам, рисункам, картинкам, где бы Вы их ни увидели:
+
+                        .row
+                            .col-xs-10.col-xs-offset-1
+                                form.b-feedback-large__form
+                                    .row
+                                        .col-xs-6
+                                            .form-group
+                                                label.sr-only Представьтесь:
+                                                input.form-control(type="text", placeholder="Представьтесь:")
+                                        .col-xs-6
+                                            .form-group
+                                                label.sr-only Телефон:
+                                                input.form-control(type="text", placeholder="Телефон:")
+                                    .form-group
+                                        label.sr-only Комментарии:
+                                        textarea.form-control(rows='6', placeholder='Комментарии:')
+                                    .form-group
+                                        label.sr-only Файл:
+                                        input.form-control(type="file")
+
+                                    button.btn.btn-success.btn-lg.btn-block.b-feedback-large__button(type="submit") Отправить заявку на #[span.b-feedback-large__button_red бесплатный] проект
+        .b-map
+            .container.b-map__container
+                .b-map__content
+                    p Есть вопросы? Звоните!
+                    p.b-map__phone 8 (343) 298-37-68
+                    p 620000,#[br]г. Екатеринбург, ул. Щербакова, 4#[br]ТРЦ «Глобус», офис 310
+                    p
+                    p #[a(href='#') info@ask-unit.ru]
+            script(charset="utf-8", async, src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Ap68d-6GZeuWzORctHmfLlKBRYXYExYr&width=100%&height=430&lang=ru_RU&sourceType=constructor&scroll=true")
+
+
+include ./includes/footer.jade

@@ -1,0 +1,76 @@
+@import "variables.less";
+@import "mixins";
+
+.b-feedback-medium {
+	background: linear-gradient(to right, #2569b0, #3f93eb);
+	color: #fff;
+
+	padding: 37px 0;
+
+	height: 394px;
+}
+
+.b-feedback-medium__background-container {
+	position: relative;
+	top: -37px;
+	opacity: .3;
+}
+
+.b-feedback-medium__background {
+	position: absolute;
+	top: 0;
+	left: -185px;
+	width: 901px;
+	height: 395px;
+
+	background: left top no-repeat url("../../assets/img/feedback-medium-bg.png");
+}
+
+.b-feedback-medium__title {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 1.2;
+	margin: 0 0 28px;
+	text-transform: uppercase;
+}
+
+.b-feedback-medium__title_underlined {
+	color: #ffcc00;
+	text-decoration: underline;
+}
+
+.b-feedback-medium__text {
+	font-family: @font-family-secondary;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.b-feedback-medium__form {
+
+	.form-control {
+		font-size: 18px;
+		font-weight: 300;
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, .48);
+		border: none;
+		padding-top: 7px;
+		padding-bottom: 5px;
+	}
+
+	textarea.form-control {
+		padding-top: 18px;
+	}
+}
+
+.b-feedback-medium__button {
+	background: linear-gradient(to top, #ffae00, #ffcc00);
+	box-shadow: 0 1px 2px rgba(106, 106, 106, .5), inset 0 -4px 0 rgba(0, 0, 0, .15);
+	border: none;
+
+	border-radius: 27px;
+	margin-top: 20px;
+}
+
+.b-feedback-medium__button_red {
+	color: #f32400;
+	text-transform: uppercase;
+}

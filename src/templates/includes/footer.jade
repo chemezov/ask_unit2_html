@@ -1,0 +1,37 @@
+.hidden
+    .b-modal-form#modal_form
+        .b-modal-form__header
+            p.b-modal-form__title Оставьте заявку
+            p.b-modal-form__description Оставьте ваши данные, мы Вам перезвоним. Расчет Вас ни к чему не обязывает
+
+        form
+            .b-modal-form__form
+                div.form-group
+                    label Ваше имя*
+                    input.form-control
+                div.form-group
+                    label Ваш номер телефона*
+                    input.form-control
+                div.form-group
+                    label Ваш E-mail
+                    input.form-control
+                div.form-group
+                    label Товар
+                    input.form-control(disabled="disabled", value='Образовательный комплект Дошколенок-1')
+                div.form-group
+                    label Комментарий
+                    textarea.form-control.resizable-y(rows=4)
+                div.form-group
+                    div.b-modal-form__upload
+                        span.b-modal-form__upload-text Прикрепить реквизиты или техническое задание
+                        input(type="file")
+                p.b-modal-form__hint * - Обязательные поля
+
+            .text-center
+                button.btn.btn-success.btn-lg.b-modal-form__button(type="submit") Оставить заявку
+
+.b-footer
+    .container
+        a.b-footer__logo(href='#'): img(src='assets/img/footer-logo.png')
+
+        p.b-footer__text.pull-right © UNIT, 2014-2016. Все права на материалы принадлежат компании «UNIT»
