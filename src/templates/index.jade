@@ -67,68 +67,36 @@ html
 
                 // Nav tabs
                 ul.nav.nav-pills.b-catalog__tabs(role='tablist')
-                    li.active(role='presentation'): a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') от 70-100 м2
-                    li(role='presentation'): a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') от 100-150 м2
-                    li(role='presentation'): a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') от 150-200 м2
-                    li(role='presentation'): a(href='#tab4', aria-controls='tab4', role='tab', data-toggle='tab') свыше 200 м2
+                    each catalogCategory, catalogIndex in catalog
+                        - var klass = (catalogIndex === 0 ? 'active' : '')
+                        li(role='presentation', class=klass): a(href='#tab#{catalogIndex+1}', aria-controls='tab#{catalogIndex+1}', role='tab', data-toggle='tab') #{catalogCategory.name}
                 // Tab panes
                 .tab-content
-                    #tab1.tab-pane.active(role='tabpanel')
-                        .row
-                            .col-xs-4
-                                .b-catalog__item
-                                    img.b-catalog__image(src='http://placehold.it/297x197')
+                    each catalogCategory, catalogIndex in catalog
+                        - var klass = (catalogIndex === 0 ? 'tab-pane active' : 'tab-pane')
+                        div(role='tabpanel', class=klass, id='tab#{catalogIndex+1}')
+                            .row
+                                each item, index in catalogCategory.items
+                                    .col-xs-4
+                                        .b-catalog__item
+                                            img.b-catalog__image(src='assets/img/catalog/#{catalogIndex+1}_#{index+1}.jpg')
 
-                                    p.b-catalog__title «Березка»
+                                            p.b-catalog__title= item.name
 
-                                    ul.b-catalog-attributes
-                                        li.b-catalog-attributes__item
-                                            span.b-catalog-attributes__title Общая площадь:
-                                            span.b-catalog-attributes__value 114 м#[sup 2]
-                                        li.b-catalog-attributes__item
-                                            span.b-catalog-attributes__title Срок строительства:
-                                            span.b-catalog-attributes__value за 40-120 дней
+                                            ul.b-catalog-attributes
+                                                each attribute in item.attributes
+                                                    li.b-catalog-attributes__item
+                                                        span.b-catalog-attributes__title #{attribute.name}:
+                                                        span.b-catalog-attributes__value #{attribute.value}
+                                                         - if (attribute.postfix)
+                                                            |  м#[sup 2]
+                                                li.b-catalog-attributes__item
+                                                    span.b-catalog-attributes__title Срок строительства:
+                                                    span.b-catalog-attributes__value за 90-120 дней
 
-                                    p.b-catalog__price цена #[span.b-catalog__price-value 1 045 000] руб.
+                                            p.b-catalog__price цена #[span.b-catalog__price-value #{item.price}] руб.
 
-                                    a.btn.btn-success.b-catalog__button(href='#') Получить планировку и&nbsp;рассчет
-                            .col-xs-4
-                                .b-catalog__item
-                                    img.b-catalog__image(src='http://placehold.it/297x197')
-
-                                    p.b-catalog__title «Березка»
-
-                                    ul.b-catalog-attributes
-                                        li.b-catalog-attributes__item
-                                            span.b-catalog-attributes__title Общая площадь:
-                                            span.b-catalog-attributes__value 114 м#[sup 2]
-                                        li.b-catalog-attributes__item
-                                            span.b-catalog-attributes__title Срок строительства:
-                                            span.b-catalog-attributes__value за 40-120 дней
-
-                                    p.b-catalog__price цена #[span.b-catalog__price-value 1 045 000] руб.
-
-                                    a.btn.btn-success.b-catalog__button(href='#') Получить планировку и&nbsp;рассчет
-                            .col-xs-4
-                                .b-catalog__item
-                                    img.b-catalog__image(src='http://placehold.it/297x197')
-
-                                    p.b-catalog__title «Березка»
-
-                                    ul.b-catalog-attributes
-                                        li.b-catalog-attributes__item
-                                            span.b-catalog-attributes__title Общая площадь:
-                                            span.b-catalog-attributes__value 114 м#[sup 2]
-                                        li.b-catalog-attributes__item
-                                            span.b-catalog-attributes__title Срок строительства:
-                                            span.b-catalog-attributes__value за 40-120 дней
-
-                                    p.b-catalog__price цена #[span.b-catalog__price-value 1 045 000] руб.
-
-                                    a.btn.btn-success.b-catalog__button(href='#') Получить планировку и&nbsp;рассчет
-                    #tab2.tab-pane(role='tabpanel') ...
-                    #tab3.tab-pane(role='tabpanel') ...
-                    #tab4.tab-pane(role='tabpanel') ...
+                                            a.btn.btn-success.b-catalog__button.fancybox(href='#modal_form') Получить планировку и&nbsp;рассчет
         .b-feedback-medium
             .container
                 .b-feedback-medium__background-container
@@ -159,16 +127,9 @@ html
             h2.b-gallery__title фото со стройплощадки
 
             .b-gallery__list
-                .b-gallery__item
-                    img.b-gallery__image(src='http://placehold.it/675x479')
-                .b-gallery__item
-                    img.b-gallery__image(src='http://placehold.it/675x479')
-                .b-gallery__item
-                    img.b-gallery__image(src='http://placehold.it/675x479')
-                .b-gallery__item
-                    img.b-gallery__image(src='http://placehold.it/675x479')
-                .b-gallery__item
-                    img.b-gallery__image(src='http://placehold.it/675x479')
+                each val in [1, 2, 3, 4, 5, 6, 7, 8]
+                    .b-gallery__item
+                        img.b-gallery__image(src='assets/img/gallery/#{val}.jpg')
                 .b-gallery__item
                     img.b-gallery__image(src='http://placehold.it/675x479')
 

@@ -160,10 +160,7 @@ gulp.task('img', [], function () {
  * Compile jade files into HTML
  */
 gulp.task('templates', [/*'clean:templates'*/], function () {
-
-    var YOUR_LOCALS = {
-        title: "My awesome title"
-    };
+    var YOUR_LOCALS = JSON.parse(fs.readFileSync('./template_locals.json', 'utf8'));
 
     return gulp.src(paths.templates)
         .pipe(jade({
@@ -188,7 +185,7 @@ gulp.task('watch', ['build'], function () {
     gulp.src('./build/*.html')
         .pipe(open('http://localhost:3000/<%=file.path.replace(file.base,"")%>', {app: 'chrome'}));
 
-    gulp.watch([paths.templates, 'src/templates/**/*.jade'], ['jade-watch']);
+    gulp.watch([paths.templates, 'src/templates/**/*.jade', './template_locals.json'], ['jade-watch']);
     //gulp.watch(['*.html']).on('change', reload);
     gulp.watch(['src/less/bootstrap/*.less'], {cwd: '.'}, ['bootstrap']).on('error', log);
     gulp.watch(paths.less, {cwd: '.'}, ['less']).on('error', log);
