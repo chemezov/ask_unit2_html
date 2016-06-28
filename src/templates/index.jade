@@ -16,16 +16,22 @@ html
         .b-feedback-mini
             h2.b-feedback-mini__title Записаться на просмотр строящегося дома
 
-            form.form-inline.b-feedback-mini__form
-                .form-group
-                    label.sr-only Представьтесь:
-                    input.form-control(type="text", placeholder="Представьтесь:")
-                .form-group
-                    label.sr-only Телефон:
-                    input.form-control(type="text", placeholder="Телефон:")
-                button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
-
-        .b-advantages
+            .container
+                form.b-feedback-mini__form
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            .row
+                                .col-xs-4
+                                    .form-group
+                                        label.sr-only Представьтесь:
+                                        input.form-control(type="text", placeholder="Представьтесь:")
+                                .col-xs-4
+                                    .form-group
+                                        label.sr-only Телефон:
+                                        input.form-control(type="text", placeholder="Телефон:")
+                                .col-xs-4
+                                    button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
+        .b-advantages#advantages
             .container
                 h2.b-advantages__title ваши выгоды
 
@@ -63,7 +69,7 @@ html
                                 img.b-advantages__image(src='assets/img/advantages/6.png')
 
                                 p.b-advantages__text Подробная и прозрачная смета, в&nbsp;которой расписаны все материалы и работы.
-        .b-catalog
+        .b-catalog#catalog
             .container
                 h2.b-catalog__header посмотрите самые популярные#[br]проекты домов
 
@@ -92,9 +98,6 @@ html
                                                         span.b-catalog-attributes__value #{attribute.value}
                                                          - if (attribute.postfix)
                                                             |  м#[sup 2]
-                                                li.b-catalog-attributes__item
-                                                    span.b-catalog-attributes__title Срок строительства:
-                                                    span.b-catalog-attributes__value за 90-120 дней
 
                                             p.b-catalog__price цена #[span.b-catalog__price-value #{item.price}] руб.
 
@@ -125,7 +128,7 @@ html
 
                             button.btn.btn-success.btn-lg.btn-block.b-feedback-medium__button(type="submit") Отправить заявку на #[span.b-feedback-medium__button_red бесплатный] проект
 
-        .b-gallery
+        .b-gallery#gallery
             h2.b-gallery__title фото со стройплощадки
 
             .b-gallery__list
@@ -135,16 +138,23 @@ html
 
         .b-feedback-mini
             h2.b-feedback-mini__title Записаться на просмотр строящегося дома
-            form.form-inline.b-feedback-mini__form
-                .form-group
-                    label.sr-only Представьтесь:
-                    input.form-control(type="text", placeholder="Представьтесь:")
-                .form-group
-                    label.sr-only Телефон:
-                    input.form-control(type="text", placeholder="Телефон:")
-                button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
+            .container
+                form.b-feedback-mini__form
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            .row
+                                .col-xs-4
+                                    .form-group
+                                        label.sr-only Представьтесь:
+                                        input.form-control(type="text", placeholder="Представьтесь:")
+                                .col-xs-4
+                                    .form-group
+                                        label.sr-only Телефон:
+                                        input.form-control(type="text", placeholder="Телефон:")
+                                .col-xs-4
+                                    button.btn.btn-success.btn-lg.b-feedback-mini__button(type="submit") Заявка на просмотр дома
 
-        .b-reviews
+        .b-reviews#reviews
             h2.b-reviews__title отзывы клиентов
 
             .b-reviews__list
@@ -152,7 +162,7 @@ html
                     iframe(width="641",height="360",src="https://www.youtube.com/embed/snHUrs9hGYM",frameborder="0",allowfullscreen)
                 .b-reviews__item
                     iframe(width="641",height="360",src="https://www.youtube.com/embed/sgDSFN8oykM",frameborder="0",allowfullscreen)
-        .b-feedback-large
+        .b-feedback-large#feedback_large
             .container
                 .b-feedback-large__background-container
                     .b-feedback-large__background
