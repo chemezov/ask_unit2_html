@@ -6,6 +6,6 @@ $(function () {
         swipe: false,
         //centerMode: true,
         //centerPadding: '60px',
-        slidesToShow: 3
+        slidesToShow: 1
     });
 });
